@@ -1,0 +1,73 @@
+{
+  "browser": {
+    "headless": false,
+    "viewport_width": 1280,
+    "viewport_height": 800,
+    "slow_mo_ms": 0,
+    "profile_directory": "browser_data/default"
+  },
+  "timing": {
+    "watch_tiers": [
+      {"name": "skip", "min_seconds": 2.0, "max_seconds": 6.0, "weight": 0.25},
+      {"name": "normal", "min_seconds": 7.0, "max_seconds": 20.0, "weight": 0.55},
+      {"name": "deep", "min_seconds": 18.0, "max_seconds": 50.0, "weight": 0.20}
+    ],
+    "deep_extra_probability": 0.05,
+    "deep_extra_min_seconds": 60.0,
+    "deep_extra_max_seconds": 120.0,
+    "read_comments_min_seconds": 2.0,
+    "read_comments_max_seconds": 6.0,
+    "think_before_type_min_seconds": 1.0,
+    "think_before_type_max_seconds": 3.5,
+    "pre_send_pause_min_seconds": 0.5,
+    "pre_send_pause_max_seconds": 2.5,
+    "burst_count_min": 2,
+    "burst_count_max": 5,
+    "burst_rest_min_seconds": 5.0,
+    "burst_rest_max_seconds": 18.0,
+    "pace_multipliers": {"normal": 1.0, "fast": 0.65, "slow": 1.4},
+    "pace_weights": {"normal": 0.55, "fast": 0.25, "slow": 0.20}
+  },
+  "events": {
+    "behavior_weights": {
+      "watch_and_prepare_comment": 0.45,
+      "quick_skip": 0.12,
+      "watch_and_offer_like": 0.10,
+      "deep_engage": 0.18,
+      "browse_author": 0.15
+    },
+    "comment_browse_action_weights": {
+      "scroll_down": 0.26,
+      "scroll_up": 0.08,
+      "hover_item": 0.16,
+      "wiggle": 0.10,
+      "pause": 0.10,
+      "wander": 0.12,
+      "drift": 0.10,
+      "read_line": 0.08
+    },
+    "hover_comment_probability": 0.35,
+    "mouse_wander_probability": 0.30,
+    "mouse_wander_steps": 2,
+    "page_scroll_probability": 0.12,
+    "typing_typo_probability": 0.05,
+    "cancel_draft_probability": 0.06,
+    "backspace_min_ms": 40,
+    "backspace_max_ms": 100,
+    "like_offer_probability": 0.38,
+    "skip_window_min": 3,
+    "skip_window_max": 5,
+    "skip_per_window_min": 0,
+    "skip_per_window_max": 0
+  },
+  "session": {
+    "default_max_videos": 20,
+    "error_reset_threshold": 3,
+    "work_start": "09:20",
+    "work_end": "02:00",
+    "work_duration_min_minutes": 45,
+    "work_duration_max_minutes": 60,
+    "rest_min_seconds": 60,
+    "rest_max_seconds": 180
+  }
+}

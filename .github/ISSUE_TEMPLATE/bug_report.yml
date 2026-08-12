@@ -1,0 +1,27 @@
+name: Bug report
+description: 报告可复现的问题，不要粘贴账号、Cookie 或真实评论。
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: 请只使用虚构、不可识别的测试数据。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题
+      description: 实际发生了什么？你期望什么？
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 最小复现步骤
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Python 与项目版本
+    validations:
+      required: true

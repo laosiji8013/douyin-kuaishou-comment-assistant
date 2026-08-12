@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+.DS_Store
+
+# Local browser state and private material
+browser_data/
+debug/
+private_data/
+*.log
+*.png
+*.jpg
+*.jpeg
+*.webp
+session_state.json
+
+# Local overrides and credentials
+.env
+.env.*
+!.env.example
+config/local.json
+data/comments.local.json
+data/keywords.local.json
+*cookie*
+*token*
+*secret*
+*credential*
