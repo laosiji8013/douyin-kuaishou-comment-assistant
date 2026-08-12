@@ -44,7 +44,9 @@
       "pause": 0.10,
       "wander": 0.12,
       "drift": 0.10,
-      "read_line": 0.08
+      "read_line": 0.08,
+      "micro_scroll": 0.08,
+      "settle_cursor": 0.06
     },
     "hover_comment_probability": 0.35,
     "mouse_wander_probability": 0.30,

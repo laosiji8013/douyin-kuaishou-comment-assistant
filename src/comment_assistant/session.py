@@ -75,6 +75,18 @@ async def perform_comment_browse_action(
         y = rng.uniform(viewport["height"] * 0.35, viewport["height"] * 0.75)
         await page.mouse.move(viewport["width"] * 0.62, y, steps=2)
         await page.mouse.move(viewport["width"] * 0.88, y, steps=6)
+    elif action == "micro_scroll":
+        distance = rng.randint(35, 90)
+        await page.mouse.wheel(0, distance)
+        await asyncio.sleep(rng.uniform(0.2, 0.6))
+        await page.mouse.wheel(0, -rng.randint(10, distance))
+    elif action == "settle_cursor":
+        await page.mouse.move(
+            viewport["width"] * rng.uniform(0.58, 0.82),
+            viewport["height"] * rng.uniform(0.38, 0.72),
+            steps=rng.randint(3, 7),
+        )
+        await asyncio.sleep(rng.uniform(0.3, 0.9))
 
 
 async def type_with_variation(
