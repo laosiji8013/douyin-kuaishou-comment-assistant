@@ -70,7 +70,7 @@ comment-assistant kuaishou --max-videos 5 --seed 2026
 | `pre_send_pause_min_seconds` | 0.5 | 填写完成后的复查下限 |
 | `pre_send_pause_max_seconds` | 2.5 | 复查上限 |
 
-这些时间只在实时模式且本条进入评论流程时使用。最终发送仍必须输入 `SEND`。
+这些时间只在实时模式且本条进入评论流程时使用。候选菜单中选择发送或编辑后发送即为本条最终确认；填入后程序按 `pre_send_pause` 停顿并直接点击发送。
 
 ## 5. 行为模式权重
 

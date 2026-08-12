@@ -180,17 +180,12 @@ async def review_comment(
             timing["pre_send_pause_min_seconds"], timing["pre_send_pause_max_seconds"]
         )
     )
-    final_choice = ask(f"输入框已填入“{comment}”。再次确认发送？输入 SEND：")
-    if final_choice != "send":
-        await field.fill("")
-        print("[取消] 未通过二次确认，已清空输入框。")
-        return False
     button = await adapter.send_button()
     if not button:
         print("[失败] 未找到发送按钮，内容保留在输入框中供手动处理。")
         return False
     await button.click()
-    print("[完成] 已按本次人工确认发送。")
+    print("[完成] 已发送本条已确认评论。")
     return True
 
 

@@ -23,7 +23,7 @@ def _default_path(repository_path: Path, resource_name: str) -> Path:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="抖音/快手交互式评论助手：支持随机节奏，但每次互动必须人工确认。"
+        description="抖音/快手评论助手：支持随机节奏、候选审核和实时发送。"
     )
     parser.add_argument("platform", choices=("douyin", "kuaishou"))
     parser.add_argument(
@@ -48,7 +48,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--interactive-live",
         action="store_true",
-        help="允许在每条两次人工确认后发送；默认 dry-run 不触发平台互动",
+        help="启用实时发送；选择发送或编辑后发送即为本条最终确认",
     )
     return parser
 
@@ -65,8 +65,8 @@ async def async_main(args: argparse.Namespace) -> int:
 
     print("=" * 68)
     print(f"平台：{args.platform} | 导航：{args.navigation} | 最多：{max_videos} 条")
-    print(f"模式：{'逐条人工确认的实时模式' if not dry_run else 'dry-run（不发送、不点赞）'}")
-    print("随机计划只决定等待和候选事件，不会绕过人工确认。")
+    print(f"模式：{'候选审核后发送的实时模式' if not dry_run else 'dry-run（不发送、不点赞）'}")
+    print("实时模式中，选择发送或编辑后发送即为本条最终确认。")
     print("=" * 68)
     if not dry_run:
         confirmation = input("实时模式会操作真实账号。输入 INTERACTIVE LIVE 继续：").strip()

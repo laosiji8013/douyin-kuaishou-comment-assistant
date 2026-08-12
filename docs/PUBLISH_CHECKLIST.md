@@ -12,7 +12,7 @@
 
 ## 仓库设置
 
-- [ ] 仓库说明明确“逐条人工确认”；
+- [ ] 仓库说明明确“候选审核后自动填写并发送”；
 - [ ] 先创建为 Private，上传后再做一次网页端检查；
 - [ ] 开启 Secret scanning 与 Push protection；
 - [ ] 开启 Private vulnerability reporting；
